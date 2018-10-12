@@ -1,5 +1,11 @@
 def heapsort(arr):
- pass 
+ temp = Heap()
+ res = []
+ for item in arr:
+   temp.insert(item)
+ while temp.get_size() > 0:
+   res.append(temp.delete())
+ return res[::-1]
  
 
 class Heap:
